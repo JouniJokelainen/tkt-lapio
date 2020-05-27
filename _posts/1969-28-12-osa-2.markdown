@@ -47,28 +47,28 @@ Git on yksi monista versionhallintajärjestelmistä. Muita käytössä olevia ve
 
 ## Yleisesti Gitistä ja GitHubista
 
-Gitin on luonut  paremmin  Linux-kernelin kehittäjänä tunnettu Linus Torvalds. Torvalds kehitti Gitin alunperin omiin tarpeisiinsa koodatessaan Linux-kerneliä: hän tarvitsi työkalun, jonka avulla voisi säilyttää eri versioita koodistaan, sekä jakaa sitä muiden kehitykseen osallistuneiden kanssa.
+Gitin on luonut  paremmin  Linux-kernelin kehittäjänä tunnettu Linus Torvalds. Torvalds kehitti Gitin alun perin omiin tarpeisiinsa koodatessaan Linux-kerneliä: hän tarvitsi työkalun, jonka avulla voisi säilyttää eri versioita koodistaan, sekä jakaa sitä muiden kehitykseen osallistuneiden kanssa.
 
 GitHub puolestaan on myöhemmin kehitetty palvelu, jonka avulla voidaan säilyttää ja julkaista Git-projekteja. GitHubiin verrannollisia palveluita on useita, kuten esimerkiksi [GitLab](https://about.gitlab.com/).
 
-Gittiä ja GitHubia käytetään yleisesti sekä työelämässä että harrastusprojekteissa. Käyttö ei rajoitu pelkästään koodiin, vaan niiden avulla voidaan tallentaa muutakin varmentamisen arvoista tietoa.  Kaikkien tiedostomuotojen versionhallintaan Git ei kuitenkaan sovellu.  Esimerkiksi Microsoft Office ohjelmien  tallennusmuodot ja kuvatiedostot eivät sovellu Gitin avulla hallittavaviksi. Git onkin alunperin rakennettu tekstimuotoisten tiedostojen versionhallintajärjestelmäksi. Tämän takia Git onkin suosittu versiohallintajärjestelmä sovelluskehittäjien keskuudessa.  
+Gittiä ja GitHubia käytetään yleisesti sekä työelämässä että harrastusprojekteissa. Käyttö ei rajoitu pelkästään koodiin, vaan niiden avulla voidaan tallentaa muutakin varmentamisen arvoista tietoa.  Kaikkien tiedostomuotojen versionhallintaan Git ei kuitenkaan sovellu.  Esimerkiksi Microsoft Office ohjelmien  tallennusmuodot ja kuvatiedostot eivät sovellu Gitin avulla hallittavaksi. Git onkin alunperin rakennettu tekstimuotoisten tiedostojen versionhallintajärjestelmäksi. Tämän takia Git onkin suosittu versiohallintajärjestelmä sovelluskehittäjien keskuudessa.  
 
 ![Gitin asentaminen](/assets/git_asennus.jpg)  
 
 <div class="exercise">
-<h3>Tehtävä 1: Github-tunnuksen luominen {% include points.html text="5%" %}</h3>
+<h3>Tehtävä 1: Github-tunnuksen luominen</h3>
 
 Luo itsellesi GitHub-tunnus osoitteessa <a href="https://github.com/"> https://github.com/ </a>. Sovelluskehittäjät rakentavat usein GitHubiin usein eräänlaisen koodiportfolion, joka usein linkitetään osaksi CV:ä. Valitse siis oma GitHub käyttäjänimesi myös tätä ajatellen.
 
 </div>
 
 <div class="exercise">
-<h3>Tehtävä 2: Gitin käyttöön määrittäminen {% include points.html text="5%" %}</h3>  
+<h3>Tehtävä 2: Gitin käyttöön määrittäminen</h3>  
 Jos käytät Windows käyttöjärjestelmää ja Gitiä ei vielä ole asennettu, voit  asentaa sen käyttöösi  esimerkiksi <a href="https://git-scm.com/downloads" >täältä</a>. 
 Asenna Git tietokoneellesi asennusohjelman tarjoamia oletusasetuksia käyttäen. 
 Tässä ohjeessa tutustumme  Gittin käyttöön  Bash komentotulkin avulla. Gittiä voidaan toki käyttää myös muiden komentotulkkien kuten esim. Windows komentokehotteen tai Windows Powershellin avulla. Git on kuitenkin alunperin luotu juuri Linuxia ajatellen joten Bash komentotulkki on luonnollinen valinta, varsinkin kun se asentuu automaattisesti myös Windows käyttöjärjestelmään Git for Windows ohjelmistopaketin mukana. 
 Gitin asentamisen jälkeen, tulee sen asetukset määrittää halutuihin arvoihin.
-Liitä ensiksi nimesi ja sähköpostiosoitteesi Gittiin niin, että kaikki Gitin seuraamaan tietoon tekemäsi tekemäsi muutokset liitetään sinuun. 
+Liitä ensiksi nimesi ja sähköpostiosoitteesi Gittiin niin, että kaikki Gitin seuraamaan tietoon tekemäsi muutokset liitetään sinuun. 
 <br>Aseta nimesi ja sähköpostiosoitteesi seuraavilla komennoilla.
 
 </div>
@@ -85,7 +85,7 @@ Jos et halua sähköpostiasi julkiseksi, GitHub tarjoaa erityisen <a href="https
 Huomaa Note-kohta äsken linkatulla sivulla! Noreplyn muoto riippuu siitä, milloin olet luonut käyttäjätunnuksen, ja jos loit tunnuksesi vasta lapio-kurssilla, saat asetettua noreply-sähköpostiosoitteen vasta kun asetat käyttäjätilisi asetuksista sähköpostiosoitteesi yksityiseksi.
 </div>
 
-Windows  ympäristössä Git asettaa oletuseditoriksi Notepad++ ohjelman ja Linux ympäristössä Vimin. Jos et ole tottunut Vimin (Linux) käyttäjä tai haluat jostain muusta syystä vaihtaa oletus editorin toiseksi, voi sen tehdä --global core.editor parametrin avulla. Muuta siis halutessasi Gitin oletuseditoriksi nano tai vaihtoehtoisesti Visual Studio Code ja tarkasta lopuksi asetukset seuraavilla komennolla:
+Windows  ympäristössä Git asettaa oletuseditoriksi Notepad++ ohjelman ja Linux ympäristössä Vimin. Jos et ole tottunut Vimin (Linux) käyttäjä tai haluat jostain muusta syystä vaihtaa oletus editorin toiseksi, voi sen tehdä --global core.editor parametrin avulla. Muuta siis halutessasi Gitin oletuseditoriksi nano tai vaihtoehtoisesti Visual Studio Code ja tarkasta lopuksi asetukset seuraavilla komennoilla:
 </div>
 ```bash
 git config --global core.editor nano
@@ -93,13 +93,13 @@ git config --global core.editor "code -wait --new-window"
 git config --list
 ```
 <div class="exercise">
-Jos käytät Windowsia ja sinulla ei ole Visual Studio Codea asennettuna, vaihda nanon tai Notepad++ paikalle <code>notepad</code>.  
+Jos käytät Windowsia ja sinulla ei ole Visual Studio Code asennettuna, vaihda nanon tai Notepad++ paikalle <code>notepad</code>.  
 
 </div>
 
 ## Git-projektin aloittaminen
 
-Git-projekti on kansio, joka sisältää tiedostoja. Näissä tiedostoissa voi esimerkiksi olla lähdekoodia tai mitä tahansa tekstipohjaista tietoa joka soveltuu Gitin avulla seurattavaksi. Kansiosta saa luotua Git-projektin suorittamalla komennon `git init` kyseisen kansion sisällä. Näin on tehtävä, jotta kansion sisällä voidaan suorittaa git-komentoja. Seurauksena kansioon syntyy alikansio `.git`, johon git säilöö tietoa kyseisestä projektista ja siinä tapahtuvista muutoksista. Alikansion voidaan ajatella olevan eräänlainen tietokanta joka mahdollistaa projektissa tapahtuneiden muutosten tarkastelun ja perumisen. Git-projekti kansiota kutsutaan myös ns. Git-työhakemistoksi (working directory).
+Git-projekti on kansio, joka sisältää tiedostoja. Näissä tiedostoissa voi esimerkiksi olla lähdekoodia tai mitä tahansa tekstipohjaista tietoa, joka soveltuu Gitin avulla seurattavaksi. Kansiosta saa luotua Git-projektin suorittamalla komennon `git init` kyseisen kansion sisällä. Näin on tehtävä, jotta kansion sisällä voidaan suorittaa git-komentoja. Seurauksena kansioon syntyy alikansio `.git`, johon git säilöö tietoa kyseisestä projektista ja siinä tapahtuvista muutoksista. Alikansion voidaan ajatella olevan eräänlainen tietokanta, joka mahdollistaa projektissa tapahtuneiden muutosten tarkastelun ja perumisen. Git-projekti kansiota kutsutaan myös ns. Git-työhakemistoksi (working directory).
 
 ### Commitit
 
@@ -181,10 +181,10 @@ Gitin avulla voidaan myös perua muutoksia. Jos haluaisimme perua `eka_tiedosto.
 Ajamalla `git add -p`, voit valita muutos kerrallaan, haluatko lisätä sen Gitin committiin (y=lisää, n=älä lisää). Komento ottaa huomioon vain muutokset tiedostoissa, _jotka on jo kertaalleen lisätty Gittiin_. Näin ollen esimerkiksi uusia tiedostoja ei voida lisätä Gittiin komennon `git add -p` avulla. Pelkkä `git add tiedosto` lisää kaikki tiedoston muutokset Gittiin kerralla. Komennolla `git add .`on myös mahdollista lisätä kerralla kokonaisen kansion sisältämät muutokset.
 
 <div class="warning">
-Jos pidät mahdollisena, että haluat jakaa projektin joskus muille, älä lisää sen commiteihin mitään salaista. Vaikka poistaisit tiedon seuraavassa commitissa, se jää Gitin projekti-historiaan, ja on löydettävissä GitHubista julkaisun jälkeen.
+Jos pidät mahdollisena, että haluat jakaa projektin joskus muille, älä lisää sen commiteihin mitään salaista. Vaikka poistaisit tiedon seuraavassa commitissa, se jää Gitin projektihistoriaan, ja on löydettävissä GitHubista julkaisun jälkeen.
 </div>
 
-Komennon `git status` avulla kannattaa säännöllisesti tarkistaa, muutokset joita olet lisäämässä seuraavaan committiin. Komennon toistuva suorittaminen on hyvä tapa, joka kannattaa omaksua.
+Komennon `git status` avulla kannattaa säännöllisesti tarkistaa ne muutokset, joita olet lisäämässä seuraavaan committiin. Komennon toistuva suorittaminen on hyvä tapa, joka kannattaa omaksua.
 
 ### Commitin paketointi
 
@@ -192,7 +192,7 @@ Kun ollaan valittu, mitä muutoksia halutaan lisätä seuraavaan committiin, pak
 
 [Täältä](https://github.com/erlang/otp/wiki/writing-good-commit-messages) löytyy nopeat ohjeet hyvän commit-viestin kirjoittamiseksi.
 
-Jatketaan edellistä esimerkkiä. Lisätään seuraavaan committiin myös tieto siitä että tiedostoon`eka_tiedosto.txt`lisätty tekstiä. Annetaan uudelleen komento `git add eka_tiedosto.txt`jolloin myös tiedostoon tehty muutos lisätään staging arealle. Tiedoston `toka_tiedosto.txt` luominen jää edelleen commitin ulkopuolelle. Ennen komennon `git commit` suorittamista, komennon `git status` tulostus on seuraava:
+Jatketaan edellistä esimerkkiä. Lisätään seuraavaan committiin myös tieto siitä, että tiedostoon`eka_tiedosto.txt`lisätty tekstiä. Annetaan uudelleen komento `git add eka_tiedosto.txt`jolloin myös tiedostoon tehty muutos lisätään staging arealle. Tiedoston `toka_tiedosto.txt` luominen jää edelleen commitin ulkopuolelle. Ennen komennon `git commit` suorittamista, komennon `git status` tulostus on seuraava:
 
 ```bash
 On branch master
@@ -211,7 +211,7 @@ Untracked files:
 
 Suoritetaan seuraavaksi komento `git commit -m "Lisätty eka_tiedosto.txt"`
 
-Nyt `git status` tulostaa :
+Nyt komento `git status` tulostaa :
 
 ```
 On branch master
@@ -223,7 +223,7 @@ Untracked files:
 nothing added to commit but untracked files present (use "git add" to track)
 ```
 
-Commitoidut muutokset eivät siis enää näy status tulosteessa. Ne eivät kuitenkaan ole hävinneet: ne on siirretty commit komennon kautta .git kansiossa olevaan Git tietokantaan. Komennolla `git log` pystyt tarkastelemaan luotuja committeja:
+Commitoidut muutokset eivät siis enää näy status tulosteessa. Ne eivät kuitenkaan ole hävinneet: ne on vain siirretty commit komennon kautta .git kansiossa olevaan Git tietokantaan. Komennolla `git log` pystyt tarkastelemaan luotuja committeja:
 
 ```
 commit 51bf544c786a671c28f70713b6cb33d87cc38
@@ -241,12 +241,12 @@ Commitin luominen voi aluksi tuntua epäintuitiiviselta. Seuraava ajatusleikki s
 
 ### Haarat
 
-Komennon `git status` tulosteen yläreunassa näkyy: `On branch master`. Haarat, eli englanniksi _branchit_, mahdollistavat committien erottamisen toisistaan. Näin ollen on mahdollista kehittää uuden haaran sisältöä ilman, että menetetään toimiva versio ohjelmasta. Tavanomaisesti jokaisella projektilla on päähaara, joka on yleensä nimeltään`master`, ja jossa pidetään sen hetkistä toimivaa ja käytössä olevaa versiota tiedosta.
+Komennon `git status` tulosteen yläreunassa näkyy: `On branch master`. Haarat, eli englanniksi _branchit_, mahdollistavat committien erottamisen toisistaan. Näin ollen on mahdollista kehittää uuden haaran sisältöä ilman, että menetetään toimiva versio ohjelmasta. Tavanomaisesti jokaisella projektilla on päähaara, joka on yleensä nimeltään`master`, ja jossa pidetään sen hetkistä toimivaa ja käytössä olevaa versiota.
 
-Usein haaroja käytetään niin, että päähaarasta erotetaan uuden toiminnallisuuden kehittämiseksi toinen haara, jossa lisäominaisuuksia kehitetään. Haarat eivät vaikuta toistensa tiloihin, eli uutta toiminnallisuutta voidaan kehittää huolimatta päähaarasta. Haaroissa olevat commitit ketjuttuvat haaran omalla aikajanalle ja eivät vaikuta toisiinsa. Kun ollaan todettu uusi ominaisuus toimivaksi, voidaan se yhdistää päähaaraan, ja poistaa uusi haara. Tässä osassa ei käsitellä haaroja sen enempää: riittää ymmärtää, että käytämme nyt vain master-, eli päähaaraa.
+Usein haaroja käytetään niin, että päähaarasta erotetaan uuden toiminnallisuuden kehittämiseksi toinen haara, jossa lisäominaisuuksia kehitetään. Haarat eivät vaikuta toistensa tiloihin, eli uutta toiminnallisuutta voidaan kehittää riippumatta päähaarasta. Haaroissa olevat commitit ketjuttuvat haaran omalla aikajanalle ja eivät vaikuta toisiinsa. Kun ollaan todettu uusi ominaisuus toimivaksi, voidaan se yhdistää päähaaraan, ja poistaa uusi haara. Tässä osassa ei käsitellä haaroja sen enempää: riittää ymmärtää, että käytämme nyt vain master-, eli päähaaraa.
 
 <div class="exercise">
-<h3>Tehtävä 3: Committien harjoittelua {% include points.html text="10%" %}</h3>
+<h3>Tehtävä 3: Committien harjoittelua</h3>
 <ol>
 <li>Luo kansio komentorivillä ja tee siitä Git-projekti.</li>
 <li>Luo projektikansioosi tiedosto nimeltä <code>tietokoneen_nimi.txt</code>. Lisää sinne tietokoneesi hostname nimi komennolla <code>hostname >> tietokoneen_nimi.txt</code>.</li>
@@ -264,7 +264,7 @@ Jos committia luodessa tulostuu virheviesti <code>error: cannot run : No such fi
 </div>
 
 <div class="exercise">
-<h3>Tehtävä 4: Muutosten poistaminen {% include points.html text="10%" %}</h3>
+<h3>Tehtävä 4: Muutosten poistaminen</h3>
 <ol>
 <li>Selvitä, miten saat poistettua muutoksen tilasta, jossa olet lisäämässä sitä committiin (näkyy vihreänä tulostuksessa), ja siirrettyä muutoksen otsikon <code>Changes not staged for commit</code> alle? Vinkki: <code>git status</code> auttaa.</li>
 <li>Lisää tiedoston tietokoneen_nimi.txt viimeiselle riville nykyinen kellonaika , ja aseta muutokset lisättäväksi seuraavaan committiin (<code>Changes to be commited</code>). <strong>Älä kuitenkaan paketoi committia.</strong></li>
@@ -281,7 +281,7 @@ Käsitellään seuraavaksi, miten GitHubia voidaan käyttää yhdessä Gitin kan
 
 Jotta projektin voi jakaa GitHubin kautta, sille pitää luoda oma repositorio (kavereille repo) GitHubiin. Tämän lisäksi GitHub repositorio täytyy kytkeä omalla koneella olevaan Git-projektin. Tämä tapahtuu lisäämällä GitHubissa  sijaitseva repositorio Git-projektin etärepositorioksi, eli _remoteksi_. Kun Git-projektille lisätään etärepositorio, on mahdollistä siirtää tietoa sen ja omalla koneella olevan projektin välillä. Tällöin projektista on olemassa kaksi versiota: paikallinen (_local_), eli "omalla koneella" oleva projekti ja etärepositorion versio (_remote_), eli GitHubissa säilöttävä versio.
 
-GitHubia voidaan siis käyttää varmuuskopiona: kun projektin tila päivitetään GitHubiin, pääsee tietoon käsiksi internetin kautta, ja projektia voidaan jatkaa, vaikka paikalliselle versiolle tapahtuisikin jotain. GitHub repositorion käyttö voidaan sallia myös muille henkilöille. Tämä mahdollistaa projekti kehittämisen työryhmänä. Projektissa toimivat henkilöt voivat kloonata Githubiin tallennetun projektin omiin paikallisiin Git projektikansioihinsa ja aika-ajoin päivittää Githubissa olevaa olevaa repositoriota.
+GitHubia voidaan siis käyttää varmuuskopiona: kun projektin tila päivitetään GitHubiin, pääsee tietoon käsiksi internetin kautta, ja projektia voidaan jatkaa, vaikka paikalliselle versiolle tapahtuisikin jotain. GitHub repositorion käyttö voidaan sallia myös muille henkilöille. Tämä mahdollistaa projektin kehittämisen työryhmänä. Projektissa toimivat henkilöt voivat kloonata Githubiin tallennetun projektin omiin paikallisiin Git projektikansioihinsa ja aika-ajoin päivittää Githubissa olevaa olevaa repositoriota.
 
 GitHubissa saa luotua repositorion oikean yläkulman pudotusvalikosta:
 
@@ -314,7 +314,7 @@ Alla näkyvässä kuvassa yhteystyypiksi on valittu SSH-yhteys:
 Uusi GitHub repositorio lisätään SSH-yhteyttä käyttäen origin nimiseksi etärepositorioksi suorittamalla paikallisen tietokoneen projektikansiossa komento `git remote add origin git@github.com:kayttaja/projekti.git`. Https-osoitetta käytettäessä osoite on lähes sama, kuin GitHub repositorioon viittaava url-osoite selaimen osoiterivillä. Huomaa että etärepositorion nimeksi voidaan asettaa muutakin kuin "origin", mutta se on yleinen valinta etärepositorin nimeksi. Yhdelle projektille voidaan lisätä useita etärepositorioita, jolloin niiden järkevä nimeäminen on tärkeää.
 
 <div class="exercise">
-<h3>Tehtävä 5: Julkisen SSH-avaimen ottaminen käyttöön GitHubissa {% include points.html text="5%" %}</h3>
+<h3>Tehtävä 5: Julkisen SSH-avaimen ottaminen käyttöön GitHubissa</h3>
 <p>
 Jos et ole luonut koneellesi ssh-avainparia, tee se ensin. Ohjeet ssh-avainparin luomiseksi löytyvät <a href="https://help.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent">täältä</a>.
 </p>
@@ -327,13 +327,13 @@ Git Bash konsolissa voit tulostaa julkisen (.pub) ssh-avaimen sisällön suoraan
 </div>
 
 <div class="exercise">
-<h3>Tehtävä 6: Etärepositorion luominen Githubiin {% include points.html text="5%" %}</h3>
+<h3>Tehtävä 6: Etärepositorion luominen Githubiin</h3>
 <p>Luo aikaisemmin tekemällesi paikallisella tietokoneella olevalle projektillekansiolle vastapari, eli repositorio GitHubiin. </p>
 
 <p><b>Älä kuitenkaan luo projektille GitHubissa valmiiksi lisenssiä, READMEtä tai .gitignore-tiedostoa, muuten kohtaat myöhemmin ongelmia.</b></p>
 
 <p>
-Liitä GitHubin repositorio paikallisen projektisi etärepositorioksi. Jos teit edellisen tehtävän ja liitit julkisen SSH-avaimen GitHub tunnukseesi, käytä SSH-osoitetta, muussa tapauksessa käytä https-osoitetta. Selvitä myös millä Git- komennolla voit tarkasta että GitHub etärepositorio on liitetty onnistuneesti.</p>
+Liitä GitHubin repositorio paikallisen projektisi etärepositorioksi. Jos teit edellisen tehtävän ja liitit julkisen SSH-avaimen GitHub tunnukseesi, käytä SSH-osoitetta, muussa tapauksessa käytä https-osoitetta. Selvitä myös millä Git- komennolla voit tarkastaa että GitHub etärepositorio on liitetty onnistuneesti.</p>
 
 </div>
 
@@ -345,7 +345,7 @@ Muutokset pusketaan etärepositorion tiettyyn haaraan seuraavasti: `git push rem
 Pusketaan tiedostot `eka_tiedosto.txt`ja `toka_tiedosto.txt`-tiedostoihin tehdyt muutokset GitHubiin komennolla `git push -u origin master`, sillä GitHub etärepositorio on liitetty nimellä `origin`, ja käytämme `master`-haaraa. Kun GitHub sivun selainnäkymä päivitetetään, tiedostot `eka_tiedosto.txt` ja `toka_tiedosto.txt`näkyvät nyt GitHubissa.
 
 <div class="exercise">
-<h3>Tehtävä 7: Commitin julkaiseminen {% include points.html text="5%" %}</h3>
+<h3>Tehtävä 7: Commitin julkaiseminen</h3>
 <ol>
 <li>Puske aiemmin tekemäsi kolme committia etärepositoriosi <code>master</code>-haaraan.</li>
 <li>Käy tarkistamassa GitHubissa, että kyseiset commitit näkyvät etärepositoriossa.</li>
@@ -356,9 +356,9 @@ Pusketaan tiedostot `eka_tiedosto.txt`ja `toka_tiedosto.txt`-tiedostoihin tehdyt
 
 Projektin sisältämät tiedot on nyt tallennettu kahteen eri paikkaan: tietokoneen paikalliseen projektikansioon sekä GitHub etärepositorioon. Optimitilanteessa nämä kahden eri säilytyspaikan tiedot ovat identtiset. Näin ei kuitenkaan välttämättä ole tilanne, varsinkaan jos GitHub etärepositorion sisältämiä tietoja käytetään useamman kuin  yhden henkilön toimesta. Katsotaan seuraavaksi, mitä käy, kun nämä kaksi tilaa eivät ole aina täysin samat.
 
-Aloitetaan tekemällä muutoksia projektiin GitHubin kautta. GitHubin etärepositoriossa olevia tiedostoja voi muokata, klikkaamalla ensin niiden nimeä ja tämän jälkeen näytön oikessa laidassa näkyvää kynä-ikonia.
+Aloitetaan tekemällä muutoksia projektiin GitHubin kautta. GitHubin etärepositoriossa olevia tiedostoja voi muokata, klikkaamalla ensin niiden nimeä ja tämän jälkeen näytön oikeassa laidassa näkyvää kynäikonia.
 
-![Kynä-ikoni Githubissa](/assets/edit.png)
+![Kynäikoni Githubissa](/assets/edit.png)
 
 Lisätään tiedostoon `eka_tiedosto.txt` uusi rivi tekstiä, ja luodaan uusi commit sivun alalaidasta vihreästä napista. Muutokset eivät kuitenkaan näy omalla koneella heti. Etärepositoriossa tehdyt muutokset eivät siis siirry automaattisesti paikalliseen projektikansioon.
 
@@ -373,7 +373,7 @@ git status
 
 Jos puskit committisi etärepositorioon vivun `-u` kanssa, Git osaa kertoa, että GitHubissa on muutoksia, joita paikallisessa versiossa ei ole: status-komento tulostaa yläreunaan `Your branch is behind 'origin/master'`. GitHub etärepositoriossa on edellä luotu uusi commit jota ei vielä paikallisesta Git projektikansiosta löydy.
 
-Synkronoidaan siis paikallinen projektikansio GitHubissa olevan etärepositorin kanssa hakemalla muutos paikalliseen kansioon komennolla `git pull`. Jos aikaisemmin oltiin suoritettu komento `push` valitsimella `-u`, ei etärepositoriota tai haaran nimeä tarvitse kirjoittaa. Suoritetaan komento `git pull`, jolloin tulostuu jotain seuraavankaltaista:
+Synkronoidaan siis paikallinen projektikansio GitHubissa olevan etärepositorin kanssa hakemalla muutos paikalliseen kansioon komennolla `git pull`. Jos aikaisemmin oltiin suoritettu komento `push` valitsimella `-u`, ei etärepositoriota tai haaran nimeä tarvitse kirjoittaa. Suoritetaan komento `git pull`, jolloin tulostuu jotain seuraavan kaltaista:
 
 ```bash
 remote: Enumerating objects: 3, done.
@@ -392,7 +392,7 @@ Fast-forward
 Nyt muutokset näkyvät myös paikallisesti.
 
 <div class="exercise">
-<h3>Tehtävä 8: Paikallisen projektikansion ja Git etärepositorin synkroinoiminen {% include points.html text="5%" %}</h3>
+<h3>Tehtävä 8: Paikallisen projektikansion ja Git etärepositorin synkroinoiminen</h3>
 Luo GitHubissa softat-alikansioon uusi tiedosto <code>Pekan_ohjelmat.txt</code>, ja hae se sitten omaan paikalliseen projektikansioosi.
 </div>
 
@@ -418,10 +418,10 @@ Aborting
 
 Tiedon tuominen paikalliseen projektikansioon pull komennolla ei toimi, koska projektikansiossa on vielä commitoimattomia muutoksia samaan tiedostoon. Haluamme kuitenkin säilyttää myös tiedostoon paikallisesti tehdyt muutokset mutta emme vielä kuitenkaan halua tehdä niistä uutta paikallista committia.
 
-Tällaisessa tilanteessa voidaan  paikalliset muutokset laittaa syrjään ns.  _stashiin_ komennolla `git stash`. Kun suoritetaan komento `git stash`, paikallisesti lisätyt muutokset Gitin seuraamissa tiedostoissa laitetaan syrjään. Tämä siis tarkoittaa, että tehdyt muutoksen poistuvat näkyvistä, mutta niitä ei ole menetetty kokonaan. Voit ajatella stashiä eräänlaisena Gitin leikepöytänä. Laittaaksesi stashin kautta väliaikaisesti talteen myös muutokset tiedostoissa joita Git ei vielä seuraa (`untracked`), aja komento parametrilla `-u`, eli `git stash -u`. Saat pullauksen jälkeen paikalliset muutokset takaisin projektikansioon käskyllä `git stash pop`. Nyt tiedosto sisältää molemmissa sijainnessa tehdyt muutokset.
+Tällaisessa tilanteessa voidaan  paikalliset muutokset laittaa syrjään ns.  _stashiin_ komennolla `git stash`. Kun suoritetaan komento `git stash`, paikallisesti lisätyt muutokset Gitin seuraamissa tiedostoissa laitetaan syrjään. Tämä siis tarkoittaa, että tehdyt muutoksen poistuvat näkyvistä, mutta niitä ei ole menetetty kokonaan. Voit ajatella stashiä eräänlaisena Gitin leikepöytänä. Laittaaksesi stashin kautta väliaikaisesti talteen myös muutokset tiedostoissa, joita Git ei vielä seuraa (`untracked`), aja komento parametrilla `-u`, eli `git stash -u`. Saat pullauksen jälkeen paikalliset muutokset takaisin projektikansioon käskyllä `git stash pop`. Nyt tiedosto sisältää molemmissa sijainneissa tehdyt muutokset.
 
 <div class="exercise">
-<h3>Tehtävä 9: Stashin käyttäminen pullatessa {% include points.html text="10%" %}</h3>
+<h3>Tehtävä 9: Stashin käyttäminen pullatessa</h3>
 <ol>
 <li>Tee muutoksia paikallisesti jo kertaalleen Gittiin lisäämiisi tiedostoihin (eivät ole <code>untracked</code>otsikon alla komennon <code>git status</code> tulostuksessa). Lisää esimerkiksi tieto käyttöjärjestelmäsi versiosta tiedoston <code>tietokoneen_nimi.txt</code> <i>ensimmäiselle riville</i> ja lisää muutos seuraavaan committiin. <strong>Älä kuitenkaan tee varsinaista committia</strong></li>
 <li>Laita sen jälkeen juuri tekemäsi muutokset syrjään stashiin.</li>
@@ -487,7 +487,7 @@ Merge made by the 'recursive' strategy.
 Nyt komennon `git status` mukaan ollaan tehty 2 committia (`ahead by 2 commits`). Ensimmäinen niistä on se, joka luotiin paikallisesti, ja toinen on uusi, automaattisesti luotu merge-commit. Nämä kaksi committia voitaisiin puskea GitHubiin ongelmitta.
 
 <div class="exercise">
-<h3>Tehtävä 10: Tietojen yhdistäminen merge toiminnon avulla {% include points.html text="5%" %}</h3>
+<h3>Tehtävä 10: Tietojen yhdistäminen merge toiminnon avulla</h3>
 <ol>
 <li>Luo etärepositorioon GitHubissa ja paikallisesti sellaiset commitit, että niissä tapahtuvat muutokset eivät ole ristiriidassa keskenään, eli eivät muokkaa samoja rivejä. Toimi esimerkiksi seuraavasti: lisää GitHubissa tiedoston <code>tietokoneen_nimi.txt</code>alkuun sen prosessin nimi joka vie tietokoneessa eniten RAM-muistia ja tee lisäyksestä uusi commit. Lisää sitten tiedoston paikallisen version loppuun tieto siitä prosessista joka vie vähiten RAM muistia ja tee tästäkin lisäyksestä uusi commit.</li>
 <li>Kokeile puskea push komennolla paikallinen muutoksesi GitHub etärepositorioon. Minkä virheviestin saat?</li>
@@ -501,7 +501,7 @@ Jos pullatessa tulostui "CONFLICT" lue seuraava osio "Merge-konflikti".
 
 ## Merge-konflikti
 
-GitHub repositoriossa jota käyttää useampi kuin yksi käyttäjä väistämättä välillä käy niin, että kaksi käyttäjää muokkaavat samoja rivejä. Miten Git tietää merge toiminnon avulla tietoja yhdistäessään, kumpi muutos halutaan pitää? No, ei se sitä voi tietääkään, eli joskus automaattinen merge ei onnistu. Kahden commit version ristiriitaista tilaa merge toimintoa tehtäessä kutsutaan _merge-konfliktiksi_. Esimerkkii merge-konfliktista on tilanne, jossa etärepositoriossa ja lokaalisti on toisensa poissulkevia muutoksia sisältävät commitit. Silloin jonkun täytyy käsin valita mitkä muutokset jätetään ja mitkä poistetaan, eli ratkottava merge-konflikti.
+GitHub repositoriossa jota käyttää useampi kuin yksi käyttäjä väistämättä välillä käy niin, että kaksi käyttäjää muokkaavat samoja rivejä. Miten Git tietää merge toiminnon avulla tietoja yhdistäessään, kumpi muutos halutaan pitää? No, ei se sitä voi tietääkään, eli joskus automaattinen merge ei onnistu. Kahden commit version ristiriitaista tilaa merge toimintoa tehtäessä kutsutaan _merge-konfliktiksi_. Esimerkki merge-konfliktista on tilanne, jossa etärepositoriossa ja lokaalisti on toisensa poissulkevia muutoksia sisältävät commitit. Silloin jonkun täytyy käsin valita mitkä muutokset jätetään ja mitkä poistetaan, eli ratkottava merge-konflikti.
 
 Kirjoitetaan GitHubissa tiedostoon `toka_tiedosto` jollekin riville "Terveisiä GitHubista", ja tehdään muutoksesta commit.
 Muokataan sitten _täsmälleen_ samaa riviä paikallisessa versiossa kirjoittamalla "Terveisiä paikalliselta tietokoneelta" ja tehdään commit.
@@ -525,7 +525,7 @@ Terveisiä GitHubista
 >>>>>> baaf2c96cw031e11138d42c1a35065b9bf8b4400b
 ```
 
-Toisensa poissulkevat commitit on siis eroteltu <, > ja = -merkkien avulla. HEAD tarkoittaa tämänhetkistä committia (eli paikallisen projektikansion nykyisen haaran viimeisintä committia), ja kirjain-numero-yhdistelmä on toisen etärepositoriossa tehdyn commitin id-tu nnus. Hienostuneemmat editorit, kuten VSCode mahdollistavat konfliktien ratkaisemisen yhdellä klikkauksella, mutta muuten ainoa vaihtoehto on poistaa sen ne rivit, joita ei haluta pitää jatkossa.
+Toisensa poissulkevat commitit on siis eroteltu <, > ja = -merkkien avulla. HEAD tarkoittaa tämänhetkistä committia (eli paikallisen projektikansion nykyisen haaran viimeisintä committia), ja kirjain-numero-yhdistelmä on toisen etärepositoriossa tehdyn commitin id-tu nnus. Hienostuneemmat editorit, kuten VSCode mahdollistavat konfliktien ratkaisemisen yhdellä klikkauksella, mutta muuten ainoa vaihtoehto on poistaa ne rivit, joita ei haluta pitää jatkossa.
 
 Poistetaan kaikki merkeillä <, = tai > alkavat rivit, ja muokataan terveisiä. Konfliktien ratkaisija siis saa päättää, mitä konfliktin sisältämään tiedostoon jää. Jätetään tiedoston sisällöksi seuraava:
 
@@ -565,20 +565,20 @@ Changes to be committed:
 
 Lopetaan siis konfliktin ratkaiseminen tekemällä uusi commit ja päivitetään myös etärepositorion tilanne puskemalla tämän jälkeen ratkaisu GitHubiin.
 
-Merge-konfliktit ovat paitsi rasittavia myös yleisiä. Helpoiten niiltä välttyy kun muistaa fetch komennolla hakea etärepositorion viimeisimmän tilan, ennen kuin jatkaa tiedon muokkaamista paikallisessa projektikansiossa. Aina se ei ole kuitenkaan mahdollista, jolloin on vain kärsivällisesti käytävä läpi tiedoissa olevat ristiriidat.
+Merge-konfliktit ovat paitsi rasittavia myös yleisiä. Helpoiten niiltä välttyy, kun muistaa fetch komennolla hakea etärepositorion viimeisimmän tilan, ennen kuin jatkaa tiedon muokkaamista paikallisessa projektikansiossa. Aina se ei ole kuitenkaan mahdollista, jolloin on vain kärsivällisesti käytävä läpi tiedoissa olevat ristiriidat.
 
-On huomattava että Merge-konflikteja voi tulla myös tilanteessa, jossa muutoksia palautetaan projektikansioon stahistä `git stash pop`  komennon avulla. Näin tapahtuu jos stashiin asetetut tiedot ovat ristiriidassa nykyisten muutosten kanssa.
+On huomattava, että Merge-konflikteja voi tulla myös tilanteessa, jossa muutoksia palautetaan projektikansioon stahistä `git stash pop`  komennon avulla. Näin tapahtuu, jos stashiin asetetut tiedot ovat ristiriidassa nykyisten muutosten kanssa.
 
 <div class="exercise">
-<h3>Tehtävä 11: Merge-konflikti {% include points.html text="10%" %}</h3>
+<h3>Tehtävä 11: Merge-konflikti</h3>
 Aiheuta projektissasi merge-konflikti, ja ratkaise se. Puske ratkaisu myös etärepositorioon GitHubissa.
 </div>
 
 ## Gitin historia
 
-Kun projekti etenee ja siihen luodaan lisää commiteja, ne synnyttävät yhdessä projektin commit historian. Gitin commit historia tarkoittaa siis commiteista muodostuvaa ketjua, joka syntyy kun committeja on luotu peräjälkeen. Projektin haaroissa olevat commit historiat ovat itsenäisiä toisistaan erillisiä commit historioita. Jos haarat yhdistetään myös niiden commit historiat yhdistetään.
+Kun projekti etenee ja siihen luodaan lisää commiteja, ne synnyttävät yhdessä projektin commit historian. Gitin commit historia tarkoittaa siis commiteista muodostuvaa ketjua, joka syntyy, kun committeja on luotu peräjälkeen. Projektin haaroissa olevat commit historiat ovat itsenäisiä toisistaan erillisiä commit historioita. Jos haarat yhdistetään myös niiden commit historiat yhdistetään.
 
-Projektin historian säilyttäminen on yksi versionhallinan suurimmista eduista. Se mahdollistaa esimerkiksi historiassa takaisin palaamisen, jos kehityksessä on lisätty jokin toimimaton ominaisuus.
+Projektin historian säilyttäminen on yksi versiohallinnan suurimmista eduista. Se mahdollistaa esimerkiksi historiassa takaisin palaamisen, jos kehityksessä on lisätty jokin toimimaton ominaisuus.
 
 ### Historian tarkasteleminen
 
@@ -603,7 +603,7 @@ Painamalla seuraavaksi "Browse files", tai edellisestä näkymästä oikeanpuoli
 Saman voi tehdä myös komentorivillä. Kun ollaan Git-projektin kansiossa, tiettyyn committiin voidaan siirtyä komennolla `git checkout commitin_id`. Tämä vastaa samaa, kuin GitHubissa koko projektin tilan tarkasteleminen tietyn commitin jälkeen. Samalla tavalla takaisin viimeisimpään committiin pääsee komennolla `git checkout haarannimi`, eli yleisimmässä tapauksessa `git checkout master`. Yksittäisen commitin muutoksia voidaan tarkastella komennolla `git show commitin_id`.
 
 <div class="exercise">
-<h3>Tehtävä 12: Salaisuus {% include points.html text="10%" %}</h3>
+<h3>Tehtävä 12: Salaisuus</h3>
 <ol>
 <li>Luo projektiisi uusi tiedosto <code>salaisuus.txt</code>, ja kirjoita sisään esimerkiksi "tämä on hyvin salainen salaisuus".</li>
 <li>Tee commit salaisuuden lisäämisestä.</li>
@@ -619,7 +619,7 @@ Tämä on muistutus, että etärepositorioon ei pidä puskea mitään salaista: 
 
 ## GitHubin workflow
 
-GitHubin kaltaiset palvelut helpottavat merkittävästi yhteisten projektien kehittämistä. Projektin käyttäjät huomaavat projektissa esiintävät ongelmat parhaiten. Projektille voi tehdä GitHubissa _issuen_, ja kertoa ohjelman vajavaisuuksista. Tavallisimpia issueiden aiheita ovat bugit ohjelman toiminnassa, ongelmat asennuksessa, tai puuttuvat toiminnallisuudet.
+GitHubin kaltaiset palvelut helpottavat merkittävästi yhteisten projektien kehittämistä. Projektin käyttäjät huomaavat projektissa esiintyvät ongelmat parhaiten. Projektille voi tehdä GitHubissa _issuen_, ja kertoa ohjelman vajavaisuuksista. Tavallisimpia issueiden aiheita ovat bugit ohjelman toiminnassa, ongelmat asennuksessa, tai puuttuvat toiminnallisuudet.
 
 Jos tietää ongelman ratkaisun, voi sitä ehdottaa projektin omistajalle koodin muodossa. GitHubissa sijaitsevan projektin voi kopioida kokonaisuudessaan omalle koneelleen komennolla `git clone`. Komento ottaa argumentiksi etärepositorion osoitteen, jonka saa projektikansion oikeasta yläkulmasta vihreästä napista. 
 
@@ -627,7 +627,7 @@ Jos tietää ongelman ratkaisun, voi sitä ehdottaa projektin omistajalle koodin
 
 Kyseessä on siis sama osoite, joka annettiin aikaisemmin `git remote add`-komennolle argumentiksi. Projektin omistaja ei saa ilmoitusta siitä, että hänen projektinsa on kloonattu.
 
-Jatkossa, kun aloitat uuden Git-projektin, on käytettävissä kaksi vaihtoehtoa etärepostorion linkittämiseksi. Voit joko luoda projektin ensin komentoriviltä komennolla `git init` ja lisätä sen jälkeen projektille etärepositorion. Toinen vaihtoehto on ensin luoda GitHubissa repositorio, ja kloonata sitten tyhjä projekti koneelle. Projekti voidaan siis aloitaa joko tyhjän paikallisen, tai tyhjän etärepositorion kautta.
+Jatkossa, kun aloitat uuden Git-projektin, on käytettävissä kaksi vaihtoehtoa etärepostorion linkittämiseksi. Voit joko luoda projektin ensin komentoriviltä komennolla `git init` ja lisätä sen jälkeen projektille etärepositorion. Toinen vaihtoehto on ensin luoda GitHubissa repositorio, ja kloonata sitten tyhjä projekti koneelle. Projekti voidaan siis aloittaa joko tyhjän paikallisen, tai tyhjän etärepositorion kautta.
 
 Jotta kloonattuun repositorioon tehdyt muutokset voidaan puskea takaisin alkuperäiseen etärepositorioon, projektin omistajan tulee [lisätä kloonaaja projektin kehittäjäksi](https://help.github.com/articles/inviting-collaborators-to-a-personal-repository/). Muussa tapauksessa komento `git push` ei onnistu. Yhteisissä projekteissa voidaan siis luoda Git-projekti, jonka etärepositoriossa kaikki osallistujat ovat kehittäjinä, jolloin kaikki voivat vapaasti lisätä projektiin koodia.
 
@@ -636,7 +636,7 @@ On kuitenkin myös toinen tapa ehdottaa muutoksia olemassaolevaan projektiin: _f
 Jos omaan forkattuun kopioosi tekemäsi muutokset ovat mielestäsi niin hyviä, että haluat ehdottaa niitä myös alkuperäiseen projektiin, sen voi tehdä [pull requestin](https://help.github.com/articles/about-pull-requests/) avulla. Tällöin alkuperäisen projektin omistaja voi niin halutessaan liittää ehdottamasi muutokset mergen avulla alkuperäiseen projektiinsa.
 
 <div class="exercise">
-<h3>Tehtävä 13: Forkkaaminen ja kloonaaminen {% include points.html text="10%" %}</h3>
+<h3>Tehtävä 13: Forkkaaminen ja kloonaaminen</h3>
 <ol>
 <li>Selvitä ensin Googlen avulla, miten saat selville komentoriviltä Git-projektin etärepositorioiden nimet ja osoitteet. Kyseessä on siis komento, joka ajetaan Git-projektin sisällä, kun sille on asetettu etärepositorio.</li>
 <li>Forkkaa omaan GitHub profiiliisi harjoitusta varten tehty repositorio osoitteesta  <a href="https://github.com/RiveriaGit/DemoRepo">https://github.com/RiveriaGit/DemoRepo</a>. Kloonaa forkattu etärepositorio sitten tietokoneellesi. Selvitä tämän jälkeen, minkä nimiseksi etärepositorio asetetaan automaattisesti kloonatessa. Voit tehdä tämän ajamalla edellisessä kohdassa selvittämäsi komennon kloonatun projektin sisällä.</li>
@@ -645,7 +645,7 @@ Jos omaan forkattuun kopioosi tekemäsi muutokset ovat mielestäsi niin hyviä, 
 </ol>
 </div>
 <div class="exercise">
-<h3>Tehtävä 14: Toisen projektin tutkiminen {% include points.html text="5%" %}</h3>
+<h3>Tehtävä 14: Toisen projektin tutkiminen</h3>
 Tutki sen jälkeen jonkin vapaan lähdekoodin projektin repositoriota GitHubissa. Etsi, mistä löydät projektin issuet ja pull requestit. Etsi myös projektiin osallistuneet (<i>contributors</i>) ja heihin liittyvä statistiikka.
 </div>
 

@@ -7,11 +7,11 @@ list_title: Materiaali
 ---
 {%- assign course = site.data.data.course -%}
 
-<h3>A link to the English page is in the upper right corner</h3>
+
 
 <h1 id="main-title">Tervetuloa Tietokone Työvälineenä -kurssin kotisivulle. </h1>
 
-Tämä kurssi on tarkoitettu Helsingin yliopiston tietojenkäsittelytieteen ensimmäisen vuoden opiskelijoille. Kurssilla tutustutaan komentoriviin Unix-tyyppisissä järjestelmissä, opetellaan Git-versionhallintatyökalun käyttöä sekä hieman HTML ja CSS-kieliä. Tarkoituksena on oppia tietojenkäsittelytietelijän käytännön taitoja, ja käyttämään opinnoissa hyödyllisiä työvälineitä. Kurssilla harjoitellaan myös tiedon itsenäistä hakemista internetistä.
+Tämä kurssi on Riverian tietojenkäsittelyn opiskelijoille. Kurssilla tutustutaan komentoriviin Unix-tyyppisissä järjestelmissä, opetellaan Git-versionhallintatyökalun käyttöä sekä hieman HTML ja CSS-kieliä. Tarkoituksena on oppia tietojenkäsittelytietelijän käytännön taitoja, ja käyttämään opinnoissa hyödyllisiä työvälineitä. Kurssilla harjoitellaan myös tiedon itsenäistä hakemista internetistä.
 
 <h2>Kurssin suorittaminen</h2>
 Kurssi suoritetaan verkkotentillä, joka tehdään [Moodle-oppimisympäristössä](https://moodle.helsinki.fi/). Moodle on yliopistolla lajaasti käytössä oleva sivusto, joka mahdollistaa sähköisen etäopetuksen järjestämisen. Kurssille on olemassa [oma kurssialue]({{course.moodle}}). Moodle-alueelle pääsy vaatii kurssiavaimen, joka on <strong>lapio-on-tyovaline</strong>. Tentti perustuu pääosin tältä sivustolta löytyvään materiaaliin, joka on jaettu kolmeen osaan: Komentorivin perusteet, Git ja versionhallinta, sekä HTML ja CSS.
