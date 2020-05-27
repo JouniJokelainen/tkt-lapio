@@ -13,29 +13,13 @@ list_title: Materiaali
 
 Tämä kurssi on Riverian tietojenkäsittelyn opiskelijoille. Kurssilla tutustutaan komentoriviin Unix-tyyppisissä järjestelmissä, opetellaan Git-versionhallintatyökalun käyttöä sekä hieman HTML ja CSS-kieliä. Tarkoituksena on oppia tietojenkäsittelytietelijän käytännön taitoja, ja käyttämään opinnoissa hyödyllisiä työvälineitä. Kurssilla harjoitellaan myös tiedon itsenäistä hakemista internetistä.
 
-<h2>Kurssin suorittaminen</h2>
-Kurssi suoritetaan verkkotentillä, joka tehdään [Moodle-oppimisympäristössä](https://moodle.helsinki.fi/). Moodle on yliopistolla lajaasti käytössä oleva sivusto, joka mahdollistaa sähköisen etäopetuksen järjestämisen. Kurssille on olemassa [oma kurssialue]({{course.moodle}}). Moodle-alueelle pääsy vaatii kurssiavaimen, joka on <strong>lapio-on-tyovaline</strong>. Tentti perustuu pääosin tältä sivustolta löytyvään materiaaliin, joka on jaettu kolmeen osaan: Komentorivin perusteet, Git ja versionhallinta, sekä HTML ja CSS.
+<h2>Kurssista</h2>
 
-Jos aiheista on kokemusta aikaisemmin, materiaalin lukeminen tai tehtävien tekeminen ei ole välttämätöntä tentin läpipääsemiseksi, vaan tenttiin voi osallistua suoraan. Jos kuitenkin käsiteltävät asiat ovat vieraita, kannattaa materiaali käydä läpi huolellisesti, sillä kurssilla opeteltavia taitoja tulet varmasti tarvitsemaan tulevissa opinnoissa. Vaikka et muuten lukisi materiaalia, lue silti tältä sivulta löytyvät [ohjeet osaston IT-järjestelmiin](/osaston-jarjestelmat).
-
-Jokaisen osan alussa on määritelty oppimistavoitteet, joiden perusteella voit määritellä itse, oletko valmis osallistumaan tenttiin.
-
-Tehtäviä tekemällä ansaitsee laskaripisteitä, jotka lasketaan mukaan kurssipisteisiin. Laskaripisteet merkitään Moodle-alueella. Voit lukea kurssipisteistä lisää [arvostelu-sivulta](/tentti).
-
-## Tukikanavat
-
-Kurssilla on käytössä sähköinen tukikanava, joka sijaitsee Telegramissa.
-- <a href="https://t.me/tktlapio">Liittymislinkki Telegram-ryhmään</a>
-
-Tukikanavalla saa esittää mitä tahansa kurssiin liittyviä kysymyksiä. Kurssikavereiden auttaminen on suotavaa.
-
-Syrjiviä tai asiattomia kommentteja ei sallita, ja niiden esittäjä poistetaan kanavalta.
-
-Lisäksi kurssille järjestetään johonkin toteutukseen pajaohjaus, jolloin on mahdollista tulla tekemään tehtäviä osaston tiloihin, ja saada halutessaan apua kurssin assistenteilta. Kesällä pajaohjausta ei järjestetä. <!---Lue lisää pajasta, ja sen aikatauluista [täältä](/paja). --->
+Jokaisen osan alussa on määritelty oppimistavoitteet. Opiskele aihealueita kurssimateriaalin ja omatoimisen opiskelun avulla siten että osaat vähintään määritellyt oppimistavoitteet.
 
 ## Välineet
 
-Tehtävät on mahdollista tehdä millä tahansa Unix-tyyppisellä käyttöjärjestelmällä. Käytännössä tämä tarkoittaa useimmiten Linux- tai macOS-tietokoneita. Mikäli mahdollista, suosittelemme SSH-tehtävää lukuunottamatta tehtävien tekemistä osaston koneilla, joissa on yliopiston oma Linuxin jakeluversio [Cubbli](https://helpdesk.it.helsinki.fi/ohjeet/tietokone-ja-tulostaminen/tyoasemapalvelu/yleista-cubblista).
+Tehtävät on mahdollista tehdä millä tahansa Unix-tyyppisellä käyttöjärjestelmällä. Käytännössä tämä tarkoittaa useimmiten Linux- tai macOS-tietokoneita. 
 
 [Windows ei kuulu Unix-tyyppisten käyttöjärjestelmien perheeseen](https://en.wikipedia.org/wiki/Unix-like). Kurssin suorittamiseksi Windows-koneella on kuitenkin useita vaihtoehtoja:
 
@@ -43,7 +27,7 @@ Tehtävät on mahdollista tehdä millä tahansa Unix-tyyppisellä käyttöjärje
 
 ### **Windows Subsystem for Linux**
 
-Windows 10 -käyttöjärjestelmässä voit asentaa Ubuntun Windowsiin ohjelmistona. Tällöin saat käyttöösi kurssin suorittamiseen soveltuvan Linux-ympäristön ilman suurempia säätöjä. Ubuntu on yksi lukuisista Linux-jakeluversioista (tuttavallisemmin distro), josta muokattua versiota käytetään myös osaston koneilla.
+Windows 10 -käyttöjärjestelmässä voit asentaa Ubuntun Windowsiin ohjelmistona. Tällöin saat käyttöösi tehtävien suorittamiseen soveltuvan Linux-ympäristön ilman suurempia säätöjä. Ubuntu on yksi lukuisista Linux-jakeluversioista (tuttavallisemmin distro), josta muokattua versiota käytetään myös osaston koneilla.
 
 Windows Subsystem for Linuxin asennus:
 
@@ -55,8 +39,6 @@ Windows Subsystem for Linuxin asennus:
 
 Tarkat ohjeet asentamiseen löydät [tästä linkistä](https://docs.microsoft.com/en-us/windows/wsl/install-win10).
 
-Ohjeisiin saattaa tulla muutoksia, kun Microsoft julkaisee uuden version Windows Subsystem for Linux -ohjelmistosta vuoden 2019 loppupuolella.
-
 Jos pelkkä tekstipohjainen käyttöliittymä vaikuttaa pelottavalta voit myös asentaa Ubuntun virtualisoituun ympäristöön käyttäen esimerkiksi alla esiteltyä VirtualBox-ohjelmistoa.
 
 ### **VirtualBox**
@@ -66,7 +48,7 @@ Varmista ennen asentamista, että sinulla on vähintään 512 Mt, mutta mieluite
 VirtualBoxin asennus:
 
 1. Lataa ja asenna VirtualBox [täältä](https://www.virtualbox.org/wiki/Downloads).
-2. Lataa Ubuntu 16.04:n levykuva (.iso) [täältä](http://releases.ubuntu.com/16.04/). Jos olet koskaan asentanut käyttöjärjestelmää CD:ltä, tämä .iso-tiedosto on tavallaan sen sisältö.
+2. Lataa Ubuntu 20.04:n levykuva (.iso) [täältä](http://releases.ubuntu.com/focal/). Jos olet koskaan asentanut käyttöjärjestelmää CD:ltä, tämä .iso-tiedosto on tavallaan sen sisältö.
 3. Seuraa [näitä ohjeita](http://www.psychocats.net/ubuntu/virtualbox) luodaksesi virtuaalikoneen.
 4. Käynnistä virtuaalikone VirtualBoxista.
 
@@ -74,16 +56,12 @@ Kysy rohkeasti apua, mikäli kohtaat ongelmia, ja ilmoita, mikäli voimme parant
 
 ## Ennen materiaalin aloittamista
 
-Kurssin suorittaminen vaatii muutaman ohjelman asentamista koneelle. Mikäli et suorita kurssia osaston koneilla, varmista, että sinulla on käyttämääsi järjestelmään asennusoikeus.
-
-Jos teet tehtäviä omalla kannettavalla, ja olet läsnäoleva yliopisto-opiskelija, asenna ensin [Eduroam](https://www.eduroam.org/what-is-eduroam/), jolla pääset internetiin Helsingin yliopiston kampusalueilla. Helpdeskillä on sille [ohjeet](https://helpdesk.it.helsinki.fi/ohjeet/kirjautuminen-ja-yhteydet/verkkoyhteydet/eduroam-verkon-asennus-asetustiedoston-avulla). Suosi aina Eduroamia yliopiston toisen verkon, HUPnetin yli. Internetin käyttö Eduroamin yli on turvallisempaa, ja se on saatavilla kampusalueilla myös ulkomailla.
-
-**Mikäli olet tietojenkäsittelytieteen pää- tai sivuaineopiskelija, aktivoi yliopiston tunnuksesi [täällä](https://helpdesk.it.helsinki.fi/ohjeet/kirjautuminen-ja-yhteydet/kayttajatunnus/uuden-kayttajatunnuksen-aktivointi) ja CS-tunnuksesi seuraavan sivun [ohjeiden](https://www.cs.helsinki.fi/tietotekniikka/k-ytt-luvat) mukaan ennen materiaalin lukemista.** Tehtävät on mahdollista tehdä ilman tietojenkäsittelytieteen käyttölupaa, mutta tulet todennäköisesti tarvitsemaan sitä tulevaisuudessa. Joulun aikaan yliopiston järjestelmissä on katko, jolloin käyttöluvan aktivointi ei onnistu. Voit silloin tehdä silti tehtävät, ja aktivoida tunnuksen myöhemmin. 
+Kurssin suorittaminen vaatii muutaman ohjelman asentamista koneelle. Varmista, että sinulla on käyttämääsi järjestelmään asennusoikeus.
 
 ## Ohjeita materiaalin lukemiseen
 
-Prosenttiluku tehtävän nimen jälkeen kertoo, kuinka monta prosenttia se vastaa kyseisen osan laskaripisteistä.
-
 Materiaali on rakennettu niin, että sitä voi seurata tehden esimerkit samalla. Suosittelemme tätä vahvasti.
 
-Mikäli löydät virheen tai typon materiaalista, forkkaa [tämä](https://github.com/tkt-lapio/tkt-lapio.github.io) projekti, korjaa virhe omaan versioosi, ja tee pull request (tästä puhutaan toisessa osassa).
+## Kiitokset
+
+Tämä materiaali on luotu Janne Lofjelmin rakentaman kurssin pohjalta. Alkuperäinen kurssi löytyy [täältä](https://tkt-lapio.github.io/) Suuret kiitokset alkuperäisen kurssin tekijälle!
